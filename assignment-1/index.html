@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaste React 1</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+  <script>
+    const header = React.createElement(
+      "h1",
+      {
+        id: "title",
+      },
+      "Hello dear"
+    );
+    const footer = React.createElement(
+      "h2",
+      {
+        id: "title",
+      },
+      "bye dear"
+    );
+    const innerDiv = React.createElement(
+      "div",
+      {id:"inner-div"},);
+    const div = React.createElement(
+      "div",
+      {
+        id: "container",
+      },
+      [header,innerDiv, footer]
+    );
+
+    let root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(div); //    ReactDOM.render(element,);
+  </script>
+</html>
